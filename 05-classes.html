@@ -10,9 +10,25 @@
 
   <script>
 
+    class Pessoa{
+      nome = 'sem nome';
+      genero = 'não informado';
+      idade;
+      
+      mostraGenero(){
+        exibirNaTela(this.genero);
+      }
+      
+      mostraNome(){
+        exibirNaTela(this.nome);
+      }
+      
+      verificaIdade(){
+        return this.idade >= 18 ? 'é maior' : 'é menor';
+      }
+    }
 
 
-    //1ª Digitação (aqui) 
 
 
 
@@ -37,9 +53,20 @@
 
 
 
-    //2ª Digitação (aqui) 
+    let umaPessoa = new Pessoa;
 
+    umaPessoa.nome = 'Checo Perez';
+    umaPessoa.genero = 'Masculino';
+    umaPessoa.idade= '30';
 
+    exibirNaTela(umaPessoa);
+
+    let outraPessoa = new Pessoa;
+
+    outraPessoa.nome = 'Maria';
+    outraPessoa.idade = '25';
+
+    exibirNaTela(outraPessoa);
 
 
     // Objeto herdando recursos
@@ -47,7 +74,7 @@
 
 
 
-     //3ª Digitação (aqui) 
+     
 
 
 
