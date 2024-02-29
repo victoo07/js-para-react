@@ -14,8 +14,10 @@
 
     // Imutabilidade (não muda)
 
+
+
     const bandas = ['Metallica', 'Guns n Roses', 'RHCP', 'Deep Purple'];
-    const maisbandas = [...bandas, 'Charlie Brown Jr', 'Mega Death'];
+    const maisbandas = [...bandas, 'Charlie Brown JR', 'Mega Death'];
 
 
 
@@ -24,6 +26,8 @@
     exibirNaTela('======================');
 
     // Spread com objeto
+
+
 
     const dados = {
       nome: 'Viviane',
@@ -36,9 +40,11 @@
       estado: 'SP',
       idade: 25 //sobrescrevendo o valor somente da idade
     };
+
     exibirNaTela(dados);
     exibirNaTela(novosDados);
     exibirNaTela(novosDados.idade);
+
 
 
     function exibirNaTela(texto) {

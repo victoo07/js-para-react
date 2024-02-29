@@ -1,8 +1,8 @@
 // Objeto no JS
 // const pessoa = {
 export const pessoa = {
-    nome : 'Ignacio',
-    idade : 41,
+    nome : 'Yago',
+    idade : 17,
     cidade : "São Paulo"
 }
 

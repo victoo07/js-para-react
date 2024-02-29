@@ -16,13 +16,9 @@
 
     const numeros = [10, 20, 30, 40, 50];
 
-
-
-    //1ª Digitação (aqui) 
-
-
-
-
+    const numerosDobrados = numeros.map(numero => numero * 2);
+   
+    
     // Outra possibilidade (Chamando função dobra)
     // const numerosDobrados = numeros.map(dobra);
 
@@ -41,7 +37,7 @@
 
 
 
-    //2ª Digitação (aqui) 
+    const nomesMaiusculo = nomes.map( nome => nome.toLocaleUpperCase());
 
 
 
@@ -59,7 +55,10 @@
 
 
 
-    //3ª Digitação (aqui) 
+    const vendas = [1500 , 2000 , 10000 , 1000 , 500];
+    const meta = 1000;
+
+    const vendasAcimaDaMeta = vendas.filter(venda => venda > meta);
 
 
 
@@ -84,7 +83,7 @@
 
 
 
-    //4ª Digitação (aqui) 
+    const result = alunos.filter(aluno => aluno.startsWith('M') ?? aluno);
 
 
 
@@ -112,8 +111,7 @@
 
 
 
-    //5ª Digitação (aqui) 
-
+    const cursosFront = cursos.filter( curso => curso.categoria == 'Front-End')
 
 
 
@@ -127,7 +125,7 @@
 
 
 
-    //6ª Digitação (aqui) 
+    const titulos = cursos.map( curso => curso.titulo);
 
 
 
@@ -140,10 +138,9 @@
 
 
 
-    //7ª Digitação (aqui) 
-
-
-
+    const titulosFront = cursos
+        .filter(curso = curso.categoria == 'Front-End')
+        .map(curso => curso.titulo);
 
     exibirNaTela(titulosFront);
 
