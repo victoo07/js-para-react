@@ -10,26 +10,22 @@
 
   <script>
 
-    class Pessoa{
+    class Pessoa {
+      // Propriedades
       nome = 'sem nome';
       genero = 'não informado';
       idade;
-      
-      mostraGenero(){
-        exibirNaTela(this.genero);
-      }
-      
-      mostraNome(){
-        exibirNaTela(this.nome);
-      }
-      
-      verificaIdade(){
-        return this.idade >= 18 ? 'é maior' : 'é menor';
-      }
+    // Métodos
+    mostraGenero() {
+      exibirNaTela(this.genero);
     }
-
-
-
+    mostraNome() {
+      exibirNaTela(this.nome);
+    }
+    verificaIdade() {
+      return this.idade >=18 ? 'é maior' : 'é menor';
+    }
+  }
 
 
     // Traz tudo da classe mãe (Pessoa) + as particularidades da classe (Aluno)
@@ -51,33 +47,31 @@
 
     // Criando objetos/ instâncias
 
-
-
     let umaPessoa = new Pessoa;
-
     umaPessoa.nome = 'Checo Perez';
-    umaPessoa.genero = 'Masculino';
-    umaPessoa.idade= '30';
+    umaPessoa.genero = 'masculino';
+    umaPessoa.idade = 30;
 
     exibirNaTela(umaPessoa);
 
     let outraPessoa = new Pessoa;
-
     outraPessoa.nome = 'Maria';
-    outraPessoa.idade = '25';
+    outraPessoa.idade = 25;
 
     exibirNaTela(outraPessoa);
-
-
+   
     // Objeto herdando recursos
 
+    let aluno = new Aluno;
+    aluno.nome = 'Vitória';
+    aluno.genero ='feminino';
+    aluno.matricula ='123abc';
+    aluno.curso = 'JS para React';
+    aluno.idade = 25;
 
-
-
-     
-
-
-
+    exibirNaTela(aluno.nome);
+    exibirNaTela(aluno.idade);
+    exibirNaTela(aluno.verificaIdade());
 
     // Console.log(aluno)
     aluno.mostraDados();
@@ -92,16 +86,16 @@
     }
 
     // Usando string JSON 
-    // function exibirNaTela(objeto) {
-    //   // Converte o objeto para uma string JSON formatada
-    //   const jsonString = JSON.stringify(objeto, null, 2);
+    function exibirNaTela(objeto) {
+      // Converte o objeto para uma string JSON formatada
+      const jsonString = JSON.stringify(objeto, null, 2);
 
-    //   // Exibe a mensagem no console do navegador
-    //   console.log(jsonString);
+      // Exibe a mensagem no console do navegador
+      console.log(jsonString);
 
-    //   // Exibe a mensagem na tela da página
-    //   document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
-    // }
+      // Exibe a mensagem na tela da página
+      document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
+    }
 
   </script>
 </body>

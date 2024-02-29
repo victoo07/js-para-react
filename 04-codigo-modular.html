@@ -10,10 +10,13 @@
 
   <script type="module">
 
+    import { pessoa, curso as treinamento }
+    from "./modulos/pessoa.js";
+
+    exibirNaTela(pessoa.nome);
+    exibirNaTela(treinamento.titulo);
 
 
-    import {pessoa, curso as treinamento}
-    from "./modulos/pessoa.js"
 
     function exibirNaTela(texto) {
       // Exibe a mensagem no console do navegador

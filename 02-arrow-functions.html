@@ -10,17 +10,15 @@
 
   <script>
 
-
-
+    // Função sintaxe tradicional
     function nomeDaFuncao() {
-      exibirNaTela('Função de sintaxe tradicional');
+      exibirNaTela('Função de sintaxe tradicional...');
     }
 
-    var outraFuncao = function(){
-      exibirNaTela('Outra forma de declarar funçao')
+    // Função anônima
+    var outraFuncao = function() {
+      exibirNaTela('Outra forma de declarar função...');
     }
-
-
 
     // Chamada da função
     nomeDaFuncao();
@@ -32,15 +30,11 @@
     calcule a diferença entre eles e retorne o resultado
     para uma variável externa */
 
+    function exercicio(valor1,valor2) {
+      return valor1 - valor2;
+    }
 
-
-  function exercicio(valor1, valor2){
-    return valor1 - valor2
-  }
-
-  let resultado = exercicio(10,3);
-
-
+    let resultado = exercicio(10,3);
 
     exibirNaTela(resultado);
 
@@ -76,17 +70,11 @@
     - Monte uma arrow function que receba um nome de pessoa e a converta para letras maiúsculas.
     - Chame a função 3x (passando nomes diferentes) e exibindo no console e tela os resultados */
 
-    const converterParaMaiusculas = (nome) => {
-  return nome.toUpperCase();
-};
-  const nome1 = converterParaMaiusculas('Alvin');
-  const nome2 = converterParaMaiusculas('Simon');
-  const nome3 = converterParaMaiusculas('Theodore');
-    
-    exibirNaTela(nome1);
-    exibirNaTela(nome2);
-    exibirNaTela(nome3);
+    let converterMaiuscula = nome => nome.toUpperCase();
 
+    exibirNaTela(converterMaiuscula('Ignacio'));
+    exibirNaTela(converterMaiuscula('Gisele'));
+    exibirNaTela(converterMaiuscula('Linda'));
 
     function exibirNaTela(texto) {
       // Exibe a mensagem no console do navegador
